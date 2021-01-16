@@ -9,14 +9,11 @@ fun main() {
 }
 
 fun getStatusCode(status: HttpStatus): Long {
-    val statusCode: Long
-    when (status) {
-        HttpStatus.OK -> statusCode = HttpStatus.OK.statusCode
-        HttpStatus.FAIL -> statusCode = HttpStatus.FAIL.statusCode
-        HttpStatus.TOO_MANY_REQUEST -> statusCode = HttpStatus.TOO_MANY_REQUEST.statusCode
+    return when (status) {
+        HttpStatus.OK -> HttpStatus.OK.statusCode
+        HttpStatus.FAIL -> HttpStatus.FAIL.statusCode
+        HttpStatus.TOO_MANY_REQUEST -> HttpStatus.TOO_MANY_REQUEST.statusCode
     }
-
-    return statusCode
 }
 
 
